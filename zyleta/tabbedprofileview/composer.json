@@ -1,0 +1,29 @@
+{
+    "name": "zyleta/tabbedprofileview",
+    "type": "phpbb-extension",
+    "description": "This extension change profile view to tabs.",
+    "version": "1.0.5",
+    "time": "2016-07-17",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Zyleta",
+            "email": "mateusz.zyleta@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpbb/phpbb": ">=3.1.0-b3,<3.2.0-RC1"
+    },
+    "extra": {
+        "display-name": "Tabbed profile view",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.0-b3,<3.2.0-RC1"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/tabbed_profile_view",
+            "filename": "version_check"
+        }
+    }
+}

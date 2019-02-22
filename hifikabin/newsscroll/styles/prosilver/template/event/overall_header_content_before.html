@@ -1,0 +1,12 @@
+<!-- IF S_NEWSSCROLL_ACTIVATED -->
+	<!-- IF not S_NEWSSCROLL_INDEX or S_INDEX -->
+		<!-- IF  not S_NEWSSCROLL_MEMBER or S_USER_LOGGED_IN -->
+				<div class="navbar">
+					<div class="newsscroll">
+						<div class="marquee" style="-webkit-animation-duration: {S_NEWSSCROLL_SPEED}s; animation-duration: {S_NEWSSCROLL_SPEED}s;">{S_NEWSSCROLL_TEXT}</div>
+					</div>
+				</div>
+			<br />
+		<!-- ENDIF -->
+	<!-- ENDIF -->
+<!-- ENDIF -->

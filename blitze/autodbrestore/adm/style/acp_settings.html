@@ -1,0 +1,59 @@
+{% include 'overall_header.html' %}
+
+<h1>{{ lang('ACP_AUTODBRESTORE') }}</h1>
+
+<form id="acp_board" method="post" action="{{ U_ACTION }}">
+
+	<fieldset>
+		<legend>{{ lang('SETTINGS') }}</legend>
+		<dl>
+			<dt><label for="file">{{ lang('SELECT_FILE') ~ lang('COLON') }}</label></dt>
+			<dd>
+				<select id="file" name="file" size="10">
+					{% for row in loops.files %}
+					<option value="{{ row.FILE }}"{% if row.FILE == CONFIG.backup_file %} selected="selected"{% endif %}>{{ row.NAME }}</option>
+					{% endfor %}
+				</select>
+				<a href="{{ U_CREATE_BACKUP }}">{{ lang('CREATE_NEW_BACKUP') }}</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="frequency">{{ lang('SELECT_FREQUENCY') ~ lang('COLON') }}</label></dt>
+			<dd>
+				{%- set frequencies = [0, 15, 30, 60] -%}
+				{%- set custom = (CONFIG.restore_frequency && CONFIG.restore_frequency not in frequencies) ? CONFIG.restore_frequency : '' -%}
+				<select id="frequency" name="frequency" data-togglable-settings="true">
+					{% for frequency in frequencies %}
+					<option value="{{ frequency }}"{% if frequency == CONFIG.restore_frequency %} selected="selected"{% endif %}>{{ lang('RESTORE_FREQUENCY_' ~ frequency ) }}</option>
+					{% endfor %}
+					<option value=""{% if custom %} selected="selected"{% endif %} data-toggle-setting="#custom-frequency">{{ lang('RESTORE_CUSTOM') }}</option>
+				</select>
+				<div id="custom-frequency">
+					<input type="number" name="frequency" min="0" step="5" value="{{ custom }}" /> {{ lang('MINUTES') }}
+				</div>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="show_notice">{{ lang('SHOW_RESTORE_NOTICE') ~ lang('COLON') }}</label></dt>
+			<dd>
+				<label><input type="radio" id="show_notice" name="show_notice" value="1"{% if CONFIG.show_notice %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" name="show_notice" value="0"{% if !CONFIG.show_notice %} checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="auto_refresh">{{ lang('AUTO_REFRESH') ~ lang('COLON') }}</label></dt>
+			<dd>
+				<label><input type="radio" id="auto_refresh" name="auto_refresh" value="1"{% if CONFIG.auto_refresh %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" name="auto_refresh" value="0"{% if !CONFIG.auto_refresh %} checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />
+		{{ S_FORM_TOKEN }}
+	</fieldset>
+
+</form>
+
+{% include 'overall_footer.html' %}

@@ -1,0 +1,35 @@
+{
+    "name": "rmcgirr83/topicrestriction",
+    "type": "phpbb-extension",
+    "description": "phpBB 3.1 extension which adds a new forum permission to restrict access to viewing topics to certain groups and forums.  Once enabled you must set which forums for which groups, under the group permissions of the forum, you want to restrict viewing of the topics. Users will still be able to see the topic titles but not access the topic itself.",
+    "version": "1.0.1",
+    "time": "2015-12-06",
+    "keywords": [
+        "phpbb",
+        "extension",
+        "communication"
+    ],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Rich McGirr",
+            "homepage": "https://www.phpbb.com/customise/db/author/rmcgirr83/contributions",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpbb/phpbb": ">=3.1.0,<3.3"
+    },
+    "extra": {
+        "display-name": "Topic Restriction",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.0,<3.3"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/topic_restriction",
+            "filename": "version_check"
+        }
+    }
+}

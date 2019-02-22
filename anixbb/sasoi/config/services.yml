@@ -1,0 +1,9 @@
+services:
+    anixbb.sasoi.listener:
+        class: anixbb\sasoi\event\main_listener
+        arguments:
+            - @template
+            - @config
+            - @user
+        tags:
+            - { name: event.listener }

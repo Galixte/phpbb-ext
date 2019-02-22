@@ -1,0 +1,33 @@
+{
+    "name": "kasimi/movetopicswhenlocked",
+    "type": "phpbb-extension",
+    "description": "This extension allows the administrator to configure a forum to automatically move locked topics to a designated forum.",
+    "homepage": "https://github.com/kasimi",
+    "version": "1.1.0",
+    "time": "2018-05-04",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "kasimi",
+            "email": "mail@kasimi.net",
+            "homepage": "https://kasimi.net",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.7",
+        "phpbb/phpbb": ">=3.2.0",
+        "composer/installers": "~1.0.0"
+    },
+    "extra": {
+        "display-name": "Move Topics When Locked",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.2.0"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/move_topics_when_locked",
+            "filename": "version_check"
+        }
+    }
+}

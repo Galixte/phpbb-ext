@@ -1,0 +1,9 @@
+services:
+    hifikabin.newsscroll.listener:
+        class: hifikabin\newsscroll\event\listener
+        arguments:
+            - @template
+            - @config
+            - @config_text
+        tags:
+            - { name: event.listener }

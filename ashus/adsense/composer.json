@@ -1,0 +1,36 @@
+{
+    "name": "ashus/adsense",
+    "type": "phpbb-extension",
+    "description": "Allows administrators to easily add their Google AdSense code to their phpBB forum.",
+    "homepage": "https://ashus.ashus.net/",
+    "version": "1.0.0",
+    "keywords": [
+        "phpbb",
+        "extension",
+        "google",
+        "adsense"
+    ],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Ashus",
+            "homepage": "https://ashus.ashus.net/",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "display-name": "Google AdSense",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.3,<3.2.*@dev"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/adsense",
+            "filename": "version_check"
+        }
+    }
+}

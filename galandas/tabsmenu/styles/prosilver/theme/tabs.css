@@ -1,0 +1,30 @@
+.headerspace,
+.tab-bbcode-menu .bbcode-menu.tab2-panel,
+.tab-bbcode-menu .bbcode-menu.tab3-panel,
+.tab-bbcode-menu .bbcode-menu.tab4-panel,
+.tab-bbcode-menu .bbcode-menu.tab5-panel,
+.tab-bbcode-menu .bbcode-menu.tab6-panel,
+.tab-bbcode-menu .bbcode-menu.tab7-panel,
+.tab-bbcode-menu .bbcode-menu.tab8-panel {
+	display: none;
+}
+
+fieldset.tab-bbcode-menu {
+	font-size: 1em;
+}
+
+fieldset.tab-bbcode-menu p {
+	font-size: 1.1em;
+	line-height: 1.3em;
+}
+
+@media (max-width: 700px) {
+	.tab-bbcode-menu #tabs {
+		margin-left: -5px;
+	}
+	
+	.tab-bbcode-menu a {
+		border-radius: 0 !important;
+		margin-left: 0;
+	}
+}

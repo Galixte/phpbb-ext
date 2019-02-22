@@ -1,0 +1,10 @@
+services:
+    galandas.tabsmenu.listener:
+        class: galandas\tabsmenu\event\listener
+        arguments:
+            - '@template'
+            - '@config'
+            - '@auth'
+            - '@user'
+        tags:
+            - { name: event.listener }

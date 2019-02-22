@@ -1,0 +1,45 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_CMBB_SETTINGS}</h1>
+<!-- IF not S_NO_ARTICLES -->
+<p>{L_ACP_NO_ARTICLES}<br><strong><a href="{U_NEW_ARTICLE}">{L_NEW_ARTICLE}</a></strong></p>
+
+<!-- ENDIF-->
+<form id="acp_board" method="post" action="{U_ACTION}">
+    <fieldset>
+        <dl>
+            <dt><label for="number_index_items">{L_ACP_NUMBER_INDEX_ITEMS}{L_COLON}</label><br /><span>{L_ACP_NUMBER_INDEX_ITEMS_EXPLAIN}</span></dt>
+            <dd><input type="number" id="number_index_items" name="number_index_items" value="{NUMBER_INDEX_ITEMS}" min="0" max="99" /></dd>
+        </dl>
+        <dl>
+            <dt><label for="min_title_length">{L_ACP_MIN_TITLE_LENGTH}{L_COLON}</label><br /><span>{L_ACP_MIN_TITLE_LENGTH_EXPLAIN}</span></dt>
+            <dd><input type="number" id="min_title_length" name="min_title_length" value="{MIN_TITLE_LENGTH}" min="0" max="99" /></dd>
+        </dl>
+        <dl>
+            <dt><label for="min_content_length">{L_ACP_MIN_CONTENT_LENGTH}{L_COLON}</label><br /><span>{L_ACP_MIN_CONTENT_LENGTH_EXPLAIN}</span></dt>
+            <dd><input type="number" id="min_content_length" name="min_content_length" value="{MIN_CONTENT_LENGTH}" min="0" max="99999" /></dd>
+        </dl>
+        <dl>
+            <dt><label for="show_menubar">{L_ACP_SHOW_MENUBAR}{L_COLON}</label><br /><span>{L_ACP_SHOW_MENUBAR_EXPLAIN}</span></dt>
+            <dd><label><input type="radio" class="radio" name="show_menubar" value="1"<!-- IF S_SHOW_MENUBAR --> id="show_menubar" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+                <label><input type="radio" class="radio" name="show_menubar" value="0"<!-- IF not S_SHOW_MENUBAR --> id="show_menubar" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+        </dl>
+        <dl>
+            <dt><label for="show_rightbar">{L_ACP_SHOW_RIGHTBAR}{L_COLON}</label><br /><span>{L_ACP_SHOW_RIGHTBAR_EXPLAIN}</span></dt>
+            <dd><label><input type="radio" class="radio" name="show_rightbar" value="1"<!-- IF S_SHOW_RIGHTBAR --> id="show_rightbar" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+                <label><input type="radio" class="radio" name="show_rightbar" value="0"<!-- IF not S_SHOW_RIGHTBAR --> id="show_rightbar" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+        </dl>
+        <dl>
+            <dt><label for="rightbar_html">{L_ACP_RIGHTBAR_HTML}{L_COLON}</label><br /><span>{L_ACP_RIGHTBAR_HTML_EXPLAIN}</span></dt>
+            <dd><textarea id="rightbar_html" name="rightbar_html" rows="4" cols="70">{RIGHTBAR_HTML}</textarea></dd>
+        </dl>
+        <p class="submit-buttons">
+            <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+            <input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+        </p>
+
+        {S_FORM_TOKEN}
+    </fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

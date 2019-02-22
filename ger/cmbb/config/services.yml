@@ -1,0 +1,97 @@
+imports:
+    - { resource: parameters.yml }
+
+services:
+    ger.cmbb.viewer:
+        class: ger\cmbb\controller\article
+        arguments:
+            - '@config'
+            - '@config_text'
+            - '@controller.helper'
+            - '@template'
+            - '@user'
+            - '@auth'
+            - '@request'
+            - '%core.root_path%'
+            - '@ger.cmbb.cmbb.driver'
+            - '@ger.cmbb.cmbb.presentation'
+
+    ger.cmbb.editor:
+        class: ger\cmbb\controller\edit
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@path_helper'
+            - '@template'
+            - '@user'
+            - '@auth'
+            - '@request'
+            - '%core.root_path%ext/ger/cmbb/'
+            - '@ger.cmbb.cmbb.driver'
+            - '@ger.cmbb.cmbb.presentation'
+
+    ger.cmbb.save:
+        class: ger\cmbb\controller\save
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@log'
+            - '@user'
+            - '@auth'
+            - '@request'
+            - '%core.root_path%'
+            - '@ger.cmbb.cmbb.driver'
+            - '@ger.cmbb.cmbb.presentation'
+            - '%core.php_ext%'
+
+    ger.cmbb.folders:
+        class: ger\cmbb\controller\folders
+        arguments:
+            - '@config'
+            - '@user'
+            - '@request'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+
+    ger.cmbb.upload:
+        class: ger\cmbb\controller\upload
+        arguments:
+            - '@config'
+            - '@user'
+            - '@auth'
+            - '@request'
+            - '@files.factory'
+            - '@path_helper'
+            - '@ger.cmbb.cmbb.driver'
+            - '%core.php_ext%'
+            
+    ger.cmbb.cmbb.driver:
+        class: ger\cmbb\cmbb\driver
+        arguments:
+            - '@config'
+            - '@template'
+            - '@controller.helper'
+            - '@user'
+            - '@dbal.conn'
+            - '%core.root_path%'
+            - '%ger.cmbb.tables.cms_article%'
+            - '%ger.cmbb.tables.cms_category%'
+            - '%core.php_ext%'
+            
+    ger.cmbb.cmbb.presentation:
+        class: ger\cmbb\cmbb\presentation
+
+    ger.cmbb.service:
+        class: ger\cmbb\service
+        arguments:
+            - '@user'
+
+    ger.cmbb.listener:
+        class: ger\cmbb\event\main_listener
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@template'
+            - '@ger.cmbb.cmbb.driver'
+        tags:
+            - { name: event.listener }

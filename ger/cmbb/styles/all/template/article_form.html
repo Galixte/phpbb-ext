@@ -1,0 +1,41 @@
+<!-- INCLUDE overall_header.html -->
+<div id="content_container" class="<!-- IF S_SHOW_RIGHTBAR -->show<!-- ELSE -->hide<!-- ENDIF-->-rightbar">
+<form class="edit_form" method="post" action="{U_FORM_ACTION}">
+    <p><label for="title">{L_TITLE}</label><input id="title" name="title" type="text" value="{CMBB_TITLE}" /></p>
+    <p><label for="category_id">{L_CATEGORY}</label>{CMBB_CATEGORY_DROPDOWN}</p>
+	<p><label for="featured_img">{L_FEATURED_IMG}</label>{IMAGE_DROPDOWN}</p>
+    <p><label for="content">{L_CONTENT}</label></p><textarea id="content" name="content">{CMBB_CONTENT}</textarea><br />
+    <!-- IF CAN_HIDE or S_IS_NEW -->
+    <fieldset>
+		<!-- IF CAN_HIDE -->
+			<!-- IF IS_VISIBLE -->
+				<input type="checkbox" name="delete" id="delete"  /> <label for="delete">{L_DELETE_ARTICLE}</label>
+			<!-- ELSE -->
+				<input type="checkbox" name="restore" id="show"  /> <label for="restore">{L_RESTORE_ARTICLE}</label>
+			<!-- ENDIF -->
+		<!-- ENDIF -->
+		<!-- IF S_IS_NEW -->
+			<p><input type="checkbox" name="disable_comments" id="disable_comments"  /> {L_NO_REACTIONS_ARTICLE}</p>
+		<!-- ENDIF -->
+    </fieldset>
+    <!-- ENDIF -->
+    <fieldset class="submit-buttons">
+        <input name="submit" class="button1" value="{L_SUBMIT}" type="submit">
+    </fieldset>
+</form>
+
+<!-- INCLUDE upload_box.html -->
+</div>
+
+<script src="{CMBB_ROOT_PATH}vendor/ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( "content", {
+    "extraPlugins": "imagebrowser",
+    "imageBrowser_listUrl": "{CMBB_IMG_DIR}?t=" + Math.random()
+        } );
+</script>
+<!-- INCLUDE footer_extra.html -->
+<!-- IF CMBB_LEFTBAR -->
+    </div>
+<!-- ENDIF -->
+<!-- INCLUDE overall_footer.html -->

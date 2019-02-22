@@ -1,0 +1,23 @@
+/*
+ * Show Subforum Images
+ * phpBB Extension
+ */
+
+.sfi-subforum {
+    display: block;
+    margin-top: 5px;
+}
+
+.sfi-subforum-image {
+    width: 20px;
+    vertical-align: middle;
+}
+
+.sfi-subforum-no-image {
+    display: inline-block;
+    width: 20px;
+}
+
+.sfi-subforum-block {
+    clear: both;
+}

@@ -1,0 +1,14 @@
+<!-- IF CTN_ENABLE -->
+<div id="container">
+    <div class="panel bg3" <!-- IF CTN_COLOR --> style="background-color:#{CTN_COLOR}"<!-- ENDIF -->>
+       <div class="inner">
+        <p style="text-align:center; margin-top: 10px;"><img src="{BOARD_URL}ext/galandas/contodb/styles/all/theme/images/adb_image/{CTN_IMAGE}" alt="" style="width: 30px; height: 30px; margin-bottom: -5px;" /> {CTN_START}</p>
+	<hr />
+	    <!-- Countdown dashboard start -->
+            <div class="panel-body">
+<div id="DateCountdown" data-date="{CTN_YEAR}-{CTN_MONTH}-{CTN_DAY} {CTN_HOUR}:{CTN_MIN}:{CTN_SEC}" style="width: 100%;"></div>            </div>		
+        <!-- Countdown dashboard end -->
+	   	</div>
+	</div>
+</div>	
+<!-- ENDIF -->

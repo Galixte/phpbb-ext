@@ -1,0 +1,28 @@
+{% if HEADERBANNER_SELECT %}
+<div class="banner-header">
+	{% if HEADERBANNER_SEARCH eq 1 or HEADERBANNER_SEARCH eq 2 or HEADERBANNER_SEARCH eq 3 or HEADERBANNER_SEARCH eq 4 or HEADERBANNER_SEARCH eq 7%}
+	<div id="search-overlay" class="search-box rightside responsive-hide"
+	{% if HEADERBANNER_SEARCH eq 1 %}
+	style="top: 30px; left: 30px;">
+	{% elseif HEADERBANNER_SEARCH eq 2 %}
+	style="top: 30px; right: 30px;">
+	{% elseif HEADERBANNER_SEARCH eq 3 %}
+	style="bottom: 30px; left: 30px;">
+	{% elseif HEADERBANNER_SEARCH eq 4 %}
+	style="bottom: 30px; right: 30px;">
+	{% elseif HEADERBANNER_SEARCH eq 7 %}
+	style="bottom: -5px; left :39%">
+	{% endif %}
+	{% INCLUDE 'navbarsearch.html' %}
+</div>
+{% endif %}
+<div style="position:absolute; z-index:-100;">
+	<h1>{{ SITENAME }}</h1>
+	<p>{{ SITE_DESCRIPTION }}</p>
+	<p class="skiplink"><a href="#start_here">{{ lang('SKIP') }}</a></p>
+</div>
+<div class="header-banner">
+	<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ lang('SITE_HOME') }}{% else %}{{ lang('INDEX') }}{% endif %}"><img class="header-banner" style="width:100%; border-radius:{{ HEADERBANNER_CORNER }}px; width:{{ HEADERBANNER_SIZE }}px;" src="{{ HEADERBANNER }}" alt="{{ lang('INDEX') }}"></a>
+</div>
+</div>
+{% endif %}

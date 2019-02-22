@@ -1,0 +1,35 @@
+{
+    "name": "ger/cmbb",
+    "type": "phpbb-extension",
+    "description": "Simple Content Management for phpBB",
+    "homepage": "https://github.com/GerB/cmbb",
+    "version": "1.0.6",
+    "time": "2018-03-08",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Ger",
+            "homepage": "https://github.com/GerB/cmbb"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "ckeditor/ckeditor": "dev-standard/stable",
+        "phpbb/phpbb": "~3.2",
+        "composer/installers": "~1.0.0"
+    },
+    "require-dev": {
+        "phpbb/epv": "dev-master"
+    },
+    "extra": {
+        "display-name": "cmBB",
+        "soft-require": {
+            "phpbb/phpbb": "~3.2"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/cmbb",
+            "filename": "version_check"
+        }
+    }
+}

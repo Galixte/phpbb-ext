@@ -1,0 +1,29 @@
+{
+    "name": "zyleta/tabbedstatblock",
+    "type": "phpbb-extension",
+    "description": "This extension change stat-block view into tabs.",
+    "version": "1.0.1",
+    "time": "2016-08-24",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Zyleta",
+            "email": "mateusz.zyleta@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpbb/phpbb": ">=3.1.0-a1,<3.2.0-RC1"
+    },
+    "extra": {
+        "display-name": "Tabbed stat-block",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.0-a1,<3.2.0-RC1"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/tabbed_stat_block",
+            "filename": "version_check"
+        }
+    }
+}

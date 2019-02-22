@@ -1,0 +1,35 @@
+<!-- INCLUDEJS TimeCircles.js -->
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+$("#DateCountdown").TimeCircles({
+    "animation": "<!-- IF CTN_ANIMATION -->smooth<!-- ELSE -->ticks<!-- ENDIF -->",
+    "bg_width": 1.2,
+    "fg_width": 0.1,
+    "circle_bg_color": "#60686F",
+    "time": {
+        "Days": {
+            "text": "{L_CONTO_GIO}",
+            "color": "#FFCC66",
+			"show": <!-- IF CTN_DAY_ENABLE -->true<!-- ELSE -->false<!-- ENDIF -->
+        },
+        "Hours": {
+            "text": "{L_CONTO_ORE}",
+            "color": "#99CCFF",
+            "show": <!-- IF CTN_HOUR_ENABLE -->true<!-- ELSE -->false<!-- ENDIF -->
+        },
+        "Minutes": {
+            "text": "{L_CONTO_MIN}",
+            "color": "#BBFFBB",
+            "show": <!-- IF CTN_MIN_ENABLE -->true<!-- ELSE -->false<!-- ENDIF -->
+        },
+        "Seconds": {
+            "text": "{L_CONTO_SEC}",
+            "color": "#FF9999",
+             "show": <!-- IF CTN_SEC_ENABLE -->true<!-- ELSE -->false<!-- ENDIF -->
+        }
+    }
+   });
+});
+//]]>
+</script>

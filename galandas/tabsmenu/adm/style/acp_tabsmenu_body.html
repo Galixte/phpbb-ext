@@ -1,0 +1,144 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_TABS_MENU_TITLE}</h1>
+
+<p>{L_ACP_TABS_MENU_VERSION}{L_COLON} {TABS_MENU_VERSION}<br />{L_ACP_TABS_MENU_CREDITS}</p>
+
+<p>{L_ACP_TABS_MENU_DONATE_EXPLAIN} {L_ACP_TABS_MENU_DONATE}</p>
+
+<form id="acp_tabsmenu_body" method="post" action="{U_ACTION}">
+	<fieldset>
+	<legend>{L_ACP_TABS_MENU_SETTINGS}</legend>	
+		<dl>
+			<dt><label for="tabsmenu_enable">{L_ACP_TABS_MENU_ENABLE}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_EXPLAIN}</span></dt>
+			<dd><input type="radio" class="radio" name="tabsmenu_enable" value="1" <!-- IF TABS_MENU_ENABLE -->id="tabsmenu_enable" checked="checked"<!-- ENDIF -->/> {L_ENABLE} &nbsp;
+				<input type="radio" class="radio" name="tabsmenu_enable" value="0" <!-- IF not TABS_MENU_ENABLE -->id="tabsmenu_enable" checked="checked"<!-- ENDIF --> /> {L_DISABLE}</dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_steady">{L_ACP_TABS_MENU_TEXT}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_steady" type="text" id="tabsmenu_text_steady" class="text medium" value="{TABS_MENU_STEADY}" placeholder="{L_ACP_TABS_MENU_PLACEHOLDER}" maxlength="255" /></dd>
+		</dl>
+		<hr />		
+		<dl>
+			<dt><label for="tabsmenu_enable_1">{L_ACP_TABS_MENU_ENABLE_1}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_1_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="tabsmenu_enable_1" value="1"<!-- IF TABS_MENU_ENABLE_1 --> id="tabsmenu_enable_1" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="tabsmenu_enable_1" value="0"<!-- IF not TABS_MENU_ENABLE_1 --> id="tabsmenu_enable_1" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_1">{L_ACP_TABS_MENU_TEXT_1}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_1_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_1" type="text" id="tabsmenu_text_1" class="text medium" value="{TABS_MENU_TEXT_1}" maxlength="255" /></dd>
+		</dl>
+		<hr />
+		<dl>
+			<dt><label for="tabsmenu_enable_2">{L_ACP_TABS_MENU_ENABLE_2}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_2_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="tabsmenu_enable_2" value="1"<!-- IF TABS_MENU_ENABLE_2 --> id="tabsmenu_enable_2" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="tabsmenu_enable_2" value="0"<!-- IF not TABS_MENU_ENABLE_2 --> id="tabsmenu_enable_2" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_2">{L_ACP_TABS_MENU_TEXT_2}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_2_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_2" type="text" id="tabsmenu_text_2" class="text medium" value="{TABS_MENU_TEXT_2}" maxlength="255" /></dd>
+		</dl>
+		<hr />
+		<dl>
+			<dt><label for="tabsmenu_enable_3">{L_ACP_TABS_MENU_ENABLE_3}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_3_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="tabsmenu_enable_3" value="1"<!-- IF TABS_MENU_ENABLE_3 --> id="tabsmenu_enable_3" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="tabsmenu_enable_3" value="0"<!-- IF not TABS_MENU_ENABLE_3 --> id="tabsmenu_enable_3" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_3">{L_ACP_TABS_MENU_TEXT_3}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_3_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_3" type="text" id="tabsmenu_text_3" class="text medium" value="{TABS_MENU_TEXT_3}" maxlength="255" /></dd>
+		</dl>
+		<hr />		
+		<dl>
+			<dt><label for="tabsmenu_enable_4">{L_ACP_TABS_MENU_ENABLE_4}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_4_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="tabsmenu_enable_4" value="1"<!-- IF TABS_MENU_ENABLE_4 --> id="tabsmenu_enable_4" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="tabsmenu_enable_4" value="0"<!-- IF not TABS_MENU_ENABLE_4 --> id="tabsmenu_enable_4" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_4">{L_ACP_TABS_MENU_TEXT_4}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_4_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_4" type="text" id="tabsmenu_text_4" class="text medium" value="{TABS_MENU_TEXT_4}" maxlength="255" /></dd>
+		</dl>
+		<hr />		
+		<dl>
+			<dt><label for="tabsmenu_enable_5">{L_ACP_TABS_MENU_ENABLE_5}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_5_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="tabsmenu_enable_5" value="1"<!-- IF TABS_MENU_ENABLE_5 --> id="tabsmenu_enable_5" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="tabsmenu_enable_5" value="0"<!-- IF not TABS_MENU_ENABLE_5 --> id="tabsmenu_enable_5" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_5">{L_ACP_TABS_MENU_TEXT_5}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_5_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_5" type="text" id="tabsmenu_text_5" class="text medium" value="{TABS_MENU_TEXT_5}" maxlength="255" /></dd>
+		</dl>
+		<hr />		
+		<dl>
+			<dt><label for="tabsmenu_enable_6">{L_ACP_TABS_MENU_ENABLE_6}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_6_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="tabsmenu_enable_6" value="1"<!-- IF TABS_MENU_ENABLE_6 --> id="tabsmenu_enable_6" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="tabsmenu_enable_6" value="0"<!-- IF not TABS_MENU_ENABLE_6 --> id="tabsmenu_enable_6" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_6">{L_ACP_TABS_MENU_TEXT_6}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_6_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_6" type="text" id="tabsmenu_text_6" class="text medium" value="{TABS_MENU_TEXT_6}" maxlength="255" /></dd>
+		</dl>
+		<hr />		
+		<dl>
+			<dt><label for="tabsmenu_enable_7">{L_ACP_TABS_MENU_ENABLE_7}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_7_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="tabsmenu_enable_7" value="1"<!-- IF TABS_MENU_ENABLE_7 --> id="tabsmenu_enable_7" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="tabsmenu_enable_7" value="0"<!-- IF not TABS_MENU_ENABLE_7 --> id="tabsmenu_enable_7" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_7">{L_ACP_TABS_MENU_TEXT_7}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_7_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_7" type="text" id="tabsmenu_text_7" class="text medium" value="{TABS_MENU_TEXT_7}" maxlength="255" /></dd>
+		</dl>
+		<hr />		
+		<dl>
+			<dt><label for="tabsmenu_enable_8">{L_ACP_TABS_MENU_ENABLE_8}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_ENABLE_8_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="tabsmenu_enable_8" value="1"<!-- IF TABS_MENU_ENABLE_8 --> id="tabsmenu_enable_8" checked="checked"<!-- ENDIF --> /> {L_YES}</label>
+			<label><input type="radio" class="radio" name="tabsmenu_enable_8" value="0"<!-- IF not TABS_MENU_ENABLE_8 --> id="tabsmenu_enable_8" checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="tabsmenu_text_8">{L_ACP_TABS_MENU_TEXT_8}{L_COLON}</label><br />
+			<span>{L_ACP_TABS_MENU_TEXT_8_EXPLAIN}</span></dt>
+			<dd><input name="tabsmenu_text_8" type="text" id="tabsmenu_text_8" class="text medium" value="{TABS_MENU_TEXT_8}" maxlength="255" /></dd>
+		</dl>		
+	</fieldset>
+	<fieldset>
+		<legend>{L_ACP_TABS_MENU_CONFS}</legend>
+		<dl>
+			<dt><label for="tabsmenu_pos">{L_TABS_MENU_POS}{L_COLON}</label><br />
+			<span>{L_TABS_MENU_POS_EXPLAIN}</span></dt>
+		<dd>
+		<select name="tabsmenu_pos" id="tabsmenu_pos" class="post">
+			<option value="1" <!-- IF TABS_MENU_TOP == "1" --> selected <!-- ENDIF -->>{L_TABS_MENU_TOP}
+			<option value="0" <!-- IF TABS_MENU_FUT == "0" --> selected <!-- ENDIF -->>{L_TABS_MENU_FUT}
+		</select>
+	   </dd>
+	   </dl>	
+	</fieldset>	
+	<fieldset>
+	<legend>{L_ACP_SUBMIT_CHANGES}</legend>		
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

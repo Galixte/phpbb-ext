@@ -1,0 +1,9 @@
+.navbar #search-box{
+	box-shadow:none;
+	float:right;
+	margin: auto;
+	padding: 5px;
+}
+.rtl .navbar #search-box{
+	float:left;
+}

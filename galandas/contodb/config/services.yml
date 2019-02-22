@@ -1,0 +1,8 @@
+services:
+    galandas.contodb.listener:
+        class: galandas\contodb\event\listener
+        arguments:
+            - '@template'
+            - '@config'         
+        tags:
+            - { name: event.listener }

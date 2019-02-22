@@ -1,0 +1,32 @@
+{
+    "name": "anixbb/sasoi",
+    "type": "phpbb-extension",
+    "description": "Display daily score of the posts, topics and members in the index page",
+    "homepage": "http://anixbb.ro",
+    "version": "1.0.0",
+    "time": "2017-03-28",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Anisor",
+            "email": "neculaioffi@gmail.com",
+            "homepage": "http://anixbb.ro",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpbb/phpbb": ">=3.1.4,<3.2.0@dev"
+    },
+    "extra": {
+        "display-name": "Show ACP statistics on index",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.4,<3.2.0@dev"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/show_acp_statistics_on_index",
+            "filename": "version_check"
+        }
+    }
+}

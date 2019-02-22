@@ -1,0 +1,37 @@
+{
+    "name": "all4phone/boardversion",
+    "type": "phpbb-extension",
+    "description": "Simple extension that shows board version on index.",
+    "homepage": "http://phpbbmods.cba.pl",
+    "version": "1.0.1",
+    "time": "2016-06-08",
+    "keywords": [
+        "phpbb",
+        "extension",
+        "Board version"
+    ],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "all4phone",
+            "homepage": "http://phpbbmods.cba.pl",
+            "email": "1all4phone1@gmail.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpbb/phpbb": ">=3.1.0,<3.3.0@dev"
+    },
+    "extra": {
+        "display-name": "Board version",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.0,<3.3.0@dev"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/board_version",
+            "filename": "version_check"
+        }
+    }
+}

@@ -1,0 +1,61 @@
+/**
+ *
+ * Countdown Disable Board. An extension for the phpBB Forum Software package.
+ *
+ * @copyright (c) 2016, Galandas, http://phpbb3world.altervista.org
+ * @license GNU General Public License, version 2 (GPL-2.0)
+ *
+ */
+ 
+.panel-body {
+    height: auto;
+    margin: auto;
+    width: 60%;
+    padding: 0px;
+}
+
+.time_circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ *	This is all the elements used to house all text used
+ * in time circles
+ **/
+.time_circles > div {
+    position: absolute;
+    text-align: center;
+}
+
+/**
+ *	Titles (Days, Hours, etc)
+ **/
+.time_circles > div > h4 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Century Gothic', Arial;
+}
+
+/**
+ *	Time numbers, ie: 12
+ **/
+.time_circles > div > span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Century Gothic', Arial;
+    font-size: 300%;
+    margin-top: 0.4em;
+    font-weight: bold;
+}
+ 
+#container {
+    margin-top: 5px;
+}
+
+
+

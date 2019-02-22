@@ -1,0 +1,32 @@
+{
+    "name": "threedi/dae",
+    "type": "phpbb-extension",
+    "description": "Multifunctional Default Avatar - Multi Style",
+    "version": "1.2.2",
+    "time": "2018-01-01",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "3Di",
+            "email": "three3di@hotmail.it",
+            "homepage": "",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "~1.0.0",
+        "phpbb/phpbb": ">=3.1.11,<3.3.0@dev"
+    },
+    "extra": {
+        "display-name": "Default Avatar Extended",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.11,<3.3.0@dev"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/default_avatar_extended",
+            "filename": "version_check"
+        }
+    }
+}

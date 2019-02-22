@@ -1,0 +1,3 @@
+parameters:
+    ger.cmbb.tables.cms_article: '%core.table_prefix%cmbb_article'
+    ger.cmbb.tables.cms_category: '%core.table_prefix%cmbb_category'

@@ -1,0 +1,104 @@
+.newsscroll_outer{
+   background-color: #cadceb;
+   border: 1px solid black;
+   border-radius: 10px;
+   overflow: hidden;
+   width: 98%;
+   height: auto;
+   position: absolute;
+}
+
+.newsscroll {
+	height: auto;
+	overflow: hidden;
+	position: relative;
+	max-width: 100%;
+}
+
+.marquee {
+	font-size: 230%;
+	overflow: hidden;
+    white-space: nowrap;
+	position: relative;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	display: inline-block;
+	left: 50%;
+	-webkit-animation: linear infinite;
+	animation: linear infinite;
+	-webkit-animation-duration: 10s;
+	animation-duration: 10s;
+	-webkit-animation-name: movement-smooth;
+	animation-name: movement-smooth;
+	-webkit-animation-direction: normal;
+	animation-direction: normal;
+}
+
+.rtl .marquee {
+	-webkit-animation-name: rtlmovement-smooth;
+	animation-name: rtlmovement-smooth;
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+
+@-webkit-keyframes movement-smooth {
+	from {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+		left: 100%;
+	}
+	to {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		left: 0%;
+	}
+}
+
+@keyframes movement-smooth {
+	from {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+		left: 100%;
+	}
+	to {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		left: 0%;
+	}
+}
+
+@-webkit-keyframes rtlmovement-smooth {
+	from {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		right: 0%;
+	}
+	to {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+		right: 100%;
+	}
+}
+
+@keyframes rtlmovement-smooth {
+	from {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		right: 0%;
+	}
+	to {
+		-webkit-transform: translateX(0%);
+		transform: translateX(0%);
+		right: 100%;
+	}
+}
+
+.marquee.marquee-movement-smooth:before {
+	-webkit-animation-name: movement-smooth;
+	animation-name: movement-smooth;
+}
+
+.marquee:hover {
+	animation-play-state: paused;
+}

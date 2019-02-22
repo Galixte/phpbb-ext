@@ -1,0 +1,39 @@
+{
+    "name": "hifikabin/newsscroll",
+    "type": "phpbb-extension",
+    "description": "Adds a ACP configurable scrolling text box above the forums",
+    "homepage": "http://phpbb.hifikabin.me.uk",
+    "version": "1.0.1",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "James Newcombe",
+            "username": "HiFiKabin",
+            "email": "webmaster@hifikabin.me.uk",
+            "homepage": "http://phpbb.hifikabin.me.uk",
+            "role": "Developer"
+        },
+        {
+            "name": "spaceace",
+            "username": "spaceace",
+            "email": "spaceace@livemembersonly.com",
+            "homepage": "https://www.livemembersonly.com",
+            "role": "Stylesheet tweaking and adding BBode"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpbb/phpbb": ">=3.1.0"
+    },
+    "extra": {
+        "display-name": "News Scroll",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.1.0"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/news_scroll",
+            "filename": "version_check"
+        }
+    }
+}

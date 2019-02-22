@@ -1,0 +1,10 @@
+services:
+    all4phone.boardversion.listener:
+        class: all4phone\boardversion\event\listener
+        arguments:
+            - '@auth'
+            - '@config'
+            - '@template'
+            - '@user'
+        tags:
+            - { name: event.listener }

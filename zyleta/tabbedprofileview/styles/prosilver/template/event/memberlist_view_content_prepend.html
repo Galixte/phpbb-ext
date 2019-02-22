@@ -1,0 +1,20 @@
+<div class="tabs-container tabstats">
+	<!-- DEFINE $SHOW_PANEL = 'contact-user' -->
+	<div id="tabs" class="tabs sub-panels" data-show-panel="{$SHOW_PANEL}" role="tablist">
+		<ul>
+			<!-- EVENT tabbed_profile_view_tablist_prepend -->
+			<!-- IF SIGNATURE -->
+			<li id="signature-tab" class="tab">
+				<a href="#tabs" data-subpanel="signature" role="tab" aria-controls="signature">{L_SIGNATURE}</a>
+			</li>
+			<!-- ENDIF -->
+			<li id="user-forum-tab" class="tab">
+				<a href="#tabs" data-subpanel="user-forum" role="tab" aria-controls="user-forum">{L_USER_FORUM}</a>
+			</li>
+			<li id="contact-user-tab" class="tab">
+				<a href="#tabs" data-subpanel="contact-user" role="tab" aria-controls="contact-user">{L_CONTACT_USER}</a>
+			</li>
+			<!-- EVENT tabbed_profile_view_tablist_append -->
+		</ul>
+	</div>
+</div>

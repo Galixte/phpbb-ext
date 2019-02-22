@@ -1,0 +1,97 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_ACP_ROV_TITLE}</h1>
+
+<p>{L_CNT_ROV_VERSION}{L_COLON} {CNT_VERSION}<br />{L_CTN_ROV_CREDITS}</p>
+
+<p>{L_CTN_ROV_DONATE_EXPLAIN} {L_CTN_ROV_DONATE}</p>
+
+<form id="acp_board" method="post" action="{U_ACTION}">
+	<fieldset>
+	<legend>{L_ACP_ROV_SETTINGS}</legend>
+		<dl>
+			<dt><label for="conto_enable">{L_CNT_ROV_ALLOW}{L_COLON}</label><br />{L_CNT_ROV_ALLOW_EXPLAIN}</dt>
+			<dd><input type="radio" id="conto_enable" class="radio" name="conto_enable" value="1" <!-- IF CTN_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_ENABLED} &nbsp;
+				<input type="radio" class="radio" name="conto_enable" value="0" <!-- IF not CTN_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_DISABLED}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_day_enable">{L_CNT_DAYS_ALLOW}{L_COLON}</label></dt>
+			<dd><input type="radio" id="conto_day_enable" class="radio" name="conto_day_enable" value="1" <!-- IF CTN_DAY_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+				<input type="radio" class="radio" name="conto_day_enable" value="0" <!-- IF not CTN_DAY_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_hour_enable">{L_CNT_HOURS_ALLOW}{L_COLON}</label></dt>
+			<dd><input type="radio" id="conto_hour_enable" class="radio" name="conto_hour_enable" value="1" <!-- IF CTN_HOUR_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+				<input type="radio" class="radio" name="conto_hour_enable" value="0" <!-- IF not CTN_HOUR_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_min_enable">{L_CNT_MINS_ALLOW}{L_COLON}</label></dt>
+			<dd><input type="radio" id="conto_min_enable" class="radio" name="conto_min_enable" value="1" <!-- IF CTN_MIN_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+				<input type="radio" class="radio" name="conto_min_enable" value="0" <!-- IF not CTN_MIN_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_sec_enable">{L_CNT_SECS_ALLOW}{L_COLON}</label></dt>
+			<dd><input type="radio" id="conto_sec_enable" class="radio" name="conto_sec_enable" value="1" <!-- IF CTN_SEC_ENABLE -->checked="checked"<!-- ENDIF -->/> {L_YES} &nbsp;
+				<input type="radio" class="radio" name="conto_sec_enable" value="0" <!-- IF not CTN_SEC_ENABLE -->checked="checked"<!-- ENDIF --> /> {L_NO}</dd>
+		</dl>
+	    <dl>
+		<dt><label for="conto_animation">{L_CNT_ANIMATION}{L_COLON}</label><br />
+		<span>{L_CNT_ANIMATION_EXPLAIN}</span></dt>
+		<dd><label><input type="radio" class="radio" name="conto_animation" value="1"<!-- IF CTN_ANIMATION --> id="conto_animation" checked="checked"<!-- ENDIF --> /> {L_CNT_SMOOTH}</label>
+		<label><input type="radio" class="radio" name="conto_animation" value="0"<!-- IF not CTN_ANIMATION --> id="conto_animation" checked="checked"<!-- ENDIF --> /> {L_CTN_TICKS}</label></dd>
+	    </dl>
+	</fieldset>
+	<fieldset>
+	<legend>{L_CTN_ROV_DATES}</legend>	
+		<dl>
+			<dt><label for="conto_day">{L_CNT_ROV_DAY}{L_COLON}</label><br />{L_CNT_ROV_DAY_EXPLAIN}</dt>
+			<dd><input id="conto_day" type="text" size="5" maxlength="5" name="conto_day" value="{CTN_DAY}"> {L_DAYS}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_month">{L_CNT_ROV_MONTH}{L_COLON}</label><br />{L_CNT_ROV_MONTH_EXPLAIN}</dt>
+			<dd><input id="conto_month" type="text" size="5" maxlength="5" name="conto_month" value="{CTN_MONTH}"> {L_MONTH}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_year">{L_CNT_ROV_YEAR}{L_COLON}</label><br />{L_CNT_ROV_YEAR_EXPLAIN}</dt>
+			<dd><input id="conto_year" type="text" size="5" maxlength="5" name="conto_year" value="{CTN_YEAR}"> {L_YEAR}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_hour">{L_CNT_ROV_HOUR}{L_COLON}</label><br />{L_CNT_ROV_HOUR_EXPLAIN}</dt>
+			<dd><input id="conto_hour" type="text" size="5" maxlength="5" name="conto_hour" value="{CTN_HOUR}"> {L_CNT_ROV_HOURS}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_min">{L_CNT_ROV_MIN}{L_COLON}</label><br />{L_CNT_ROV_MIN_EXPLAIN}</dt>
+			<dd><input id="conto_min" type="text" size="5" maxlength="5" name="conto_min" value="{CTN_MIN}"> {L_MINUTES}</dd>
+		</dl>
+		<dl>
+			<dt><label for="conto_sec">{L_CNT_ROV_SEC}{L_COLON}</label><br />{L_CNT_ROV_SEC_EXPLAIN}</dt>
+			<dd><input id="conto_sec" type="text" size="5" maxlength="5" name="conto_sec" value="{CTN_SEC}"> {L_SECONDS}</dd>
+		</dl>		
+	</fieldset>
+	<fieldset>
+	<legend>{L_CNT_ROV_TEXT}</legend>
+		<dl>
+		<dt><label for="conto_color">{L_CNT_ROV_COLOR}{L_COLON}</label><br />{L_CNT_ROV_COLOR_EXPLAIN}</dt>
+		<dd><input id="conto_color" type="text" name="conto_color" value="{CTN_COLOR}" size="6" maxlength="6" <!-- IF CTN_COLOR -->style="border-right:20px solid #{CTN_COLOR}"<!-- ENDIF --> /> {L_CNT_ROV_COLOR}</dd>
+		</dl>
+		<dl>
+		<dt><label for="conto_image">{L_CNT_ROV_IMAGE}{L_COLON}</label><br />{L_CNT_ROV_IMAGE_EXPLAIN}</dt>
+		<dd><input id="conto_image" type="text" size="6" maxlength="11" name="conto_image" value="{CTN_IMAGE}"> {L_CNT_ROV_IMAGE}</dd>
+		</dl>
+		<dl>
+		<dt><label for="conto_start">{L_CNT_ROV_START}{L_COLON}</label><br />{L_CNT_ROV_START_EXPLAIN}</dt>
+		<dd><textarea id="conto_start" name="conto_start" rows="5" cols="35">{CTN_START}</textarea></dd>
+		</dl>
+	</fieldset>	
+	<fieldset>
+	<legend>{L_ACP_SUBMIT_CHANGES}</legend>	
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+
+		{S_FORM_TOKEN}
+   </fieldset>		
+</form>
+
+<!-- INCLUDE overall_footer.html -->

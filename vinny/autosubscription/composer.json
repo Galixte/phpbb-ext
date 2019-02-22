@@ -1,0 +1,36 @@
+{
+    "name": "vinny/autosubscription",
+    "type": "phpbb-extension",
+    "description": "This extension keep the option 'Notify me when a reply is posted' checked by default automatically to subscription own topic",
+    "homepage": "https://vinny.github.io/",
+    "version": "1.0.0",
+    "keywords": [
+        "phpbb",
+        "extension",
+        "notify"
+    ],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "_Vinny_",
+            "email": "vinnykun01@gmail.com",
+            "homepage": "https://vinny.github.io/",
+            "role": "Extension Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "phpbb/phpbb": ">=3.2.0"
+    },
+    "extra": {
+        "display-name": "Auto subscription own topic",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.2.0"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/auto_subscription_own_topic",
+            "filename": "version_check"
+        }
+    }
+}

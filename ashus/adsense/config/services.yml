@@ -1,0 +1,11 @@
+services:
+    ashus.adsense.listener:
+        class: ashus\adsense\event\listener
+        arguments:
+            - @config
+            - @config_text
+            - @request
+            - @template
+            - @user
+        tags:
+            - { name: event.listener }

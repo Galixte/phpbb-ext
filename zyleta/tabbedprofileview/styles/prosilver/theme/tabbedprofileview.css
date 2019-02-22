@@ -1,0 +1,149 @@
+#viewprofile div~div.bg2,
+#viewprofile div~div.bg1 {
+	display: none;
+}
+
+.tabs-container.tabstats {
+	margin-right: 5px;
+}
+
+.tabstats #tabs {
+	margin-left: 25%;
+}
+
+.tabstats #tabs .tab {
+	float: right;
+}
+
+#viewprofile .tabstats {
+	display: inline-block;
+	width: 100%;
+	float: right;
+	padding: 0;
+}
+
+#viewprofile .tabstats .inner {
+	padding: 5px 10px;
+}
+
+#viewprofile .bg1 {
+	float: left;
+	display: inline-block;
+	width: 25%;
+	margin-right: 5px;
+}
+
+#viewprofile .left-box {
+	width: 100%;
+	float: none;
+}
+
+#viewprofile .profile-avatar img {
+	display: block;
+	margin: 0 auto;
+}
+
+#viewprofile dl.profile-details dt{
+	margin: 0 0 2px 0;
+	float: left;
+	width: auto;
+}
+
+#viewprofile dl.profile-details dd {
+	margin: 0 0 5px 0;
+}
+
+#viewprofile dd select {
+	width: 150px;
+}
+
+#viewprofile .bg2 dl.details {
+	font-size: 1em;
+}
+
+#viewprofile .bg2 dl.details dt {
+	width: 40%;
+	text-align: right;
+	float: left;
+}
+
+#viewprofile .bg2 dl.details dd {
+	float: none;
+	width: auto;
+}
+
+#viewprofile .postbody {
+	width: 100%;
+}
+
+#viewprofile .signature > img {
+	max-width: 100% !important;
+}
+
+@media only screen and (max-width: 1000px) {
+	#viewprofile dd select {
+		width: 115px;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.tabs-container.tabstats {
+		margin-right: -5px;
+	}
+	
+	.tabstats #tabs {
+		margin-left: 200px;
+	}
+	
+	.tabstats #tabs .tab a {
+		border-radius: 0;
+		margin-right: 0;
+		margin-left: 1px;
+	}
+	
+	#viewprofile .bg1 {
+		width: 200px;
+		margin-left: -5px;
+		margin-right: -4px;
+	}
+	
+	#viewprofile dl.profile-details dt {
+		text-align: center;
+		width: 100%;
+		font-weight: bold;
+	}
+   
+	#viewprofile dl.profile-details dd {
+		text-align: center;
+		width: 100%;
+	}
+   
+	#viewprofile .bg2 dl.details dt {
+		margin: 0 0 2px 0;
+		width: 100%;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#viewprofile .bg2 dl.details dd {
+		margin: 0 0 5px 0;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 475px) {
+	.tabstats #tabs {
+		margin-left: 100px;
+	}
+
+	#viewprofile .bg1 {
+		width: 150px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.tabstats #tabs {
+		margin-left: 0;
+	}
+}

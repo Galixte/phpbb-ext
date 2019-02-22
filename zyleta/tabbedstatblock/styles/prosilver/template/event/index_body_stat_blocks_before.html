@@ -1,0 +1,102 @@
+<div class="tabs-container tab-stat-block">
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+	<!-- DEFINE $SHOW_PANEL = 'quick-login' -->
+<!-- ELSE -->
+	<!-- DEFINE $SHOW_PANEL = 'online-list' -->
+<!-- ENDIF -->
+	<div id="tabs" class="tabs sub-panels" data-show-panel="{$SHOW_PANEL}" role="tablist">
+		<ul>
+			<!-- EVENT tabbed_stat_block_tablist_prepend -->
+			<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+			<li id="quick-login-tab" class="tab">
+				<a href="#tabs" data-subpanel="quick-login" role="tab" aria-controls="quick-login">{L_LOGIN_LOGOUT}</a>
+			</li>
+			<!-- ENDIF -->
+			<!-- IF S_DISPLAY_ONLINE_LIST -->
+			<li id="online-list-tab" class="tab">
+				<a href="#tabs" data-subpanel="online-list" role="tab" aria-controls="online-list">{L_WHO_IS_ONLINE}</a>
+			</li>
+			<!-- ENDIF -->
+			<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+			<li id="bithday-list-tab" class="tab">
+				<a href="#tabs" data-subpanel="bithday-list" role="tab" aria-controls="bithday-list">{L_BIRTHDAYS}</a>
+			</li>
+			<!-- ENDIF -->
+			<!-- IF NEWEST_USER -->
+			<li id="statistics-tab" class="tab">
+				<a href="#tabs" data-subpanel="statistics" role="tab" aria-controls="statistics">{L_STATISTICS}</a>
+			</li>
+			<!-- ENDIF -->
+			<!-- EVENT tabbed_stat_block_tablist_append -->
+		</ul>
+	</div>
+</div>
+
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+<fieldset id="quick-login" class="fields2 tab-stat-block" role="tabpanel">
+    <div class="panel bg3">
+		<form method="post" action="{S_LOGIN_ACTION}" class="headerspace-tab">
+		<h3><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a><!-- IF S_REGISTER_ENABLED -->&nbsp; &bull; &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF --></h3>
+			<fieldset class="quick-login">
+				<label for="username"><span>{L_USERNAME}{L_COLON}</span> <input type="text" tabindex="1" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" /></label>
+				<label for="password"><span>{L_PASSWORD}{L_COLON}</span> <input type="password" tabindex="2" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" autocomplete="off" /></label>
+				<!-- IF U_SEND_PASSWORD -->
+					<a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+				<!-- ENDIF -->
+				<!-- IF S_AUTOLOGIN_ENABLED -->
+					<span class="responsive-hide">|</span> <label for="autologin">{L_LOG_ME_IN} <input type="checkbox" tabindex="4" name="autologin" id="autologin" /></label>
+				<!-- ENDIF -->
+				<input type="submit" tabindex="5" name="login" value="{L_LOGIN}" class="button2" />
+				{S_LOGIN_REDIRECT}
+			</fieldset>
+		</form>
+	</div>
+</fieldset>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+<fieldset id="online-list" class="fields2 tab-stat-block" role="tabpanel">
+    <div class="panel bg3">
+		<div class="stat-block online-list-tab">
+			<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+			<p>
+				<!-- EVENT index_body_block_online_prepend -->
+				{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
+				<!-- IF LEGEND --><br /><em>{L_LEGEND}{L_COLON} {LEGEND}</em><!-- ENDIF -->
+				<!-- EVENT index_body_block_online_append -->
+			</p>
+		</div>
+	</div>
+</fieldset>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+<fieldset id="bithday-list" class="fields2 tab-stat-block" role="tabpanel">
+    <div class="panel bg3">
+		<div class="stat-block birthday-list-tab">
+			<h3>{L_BIRTHDAYS}</h3>
+			<p>
+				<!-- EVENT index_body_block_birthday_prepend -->
+				<!-- IF .birthdays -->{L_CONGRATULATIONS}{L_COLON} <strong><!-- BEGIN birthdays -->{birthdays.USERNAME}<!-- IF birthdays.AGE !== '' --> ({birthdays.AGE})<!-- ENDIF --><!-- IF not birthdays.S_LAST_ROW -->, <!-- ENDIF --><!-- END birthdays --></strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+				<!-- EVENT index_body_block_birthday_append -->
+			</p>
+		</div>
+	</div>
+</fieldset>
+<!-- ENDIF -->
+
+<!-- IF NEWEST_USER -->
+<fieldset id="statistics" class="fields2 tab-stat-block" role="tabpanel">
+    <div class="panel bg3">
+		<div class="stat-block statistics-tab">
+			<h3>{L_STATISTICS}</h3>
+			<p>
+				<!-- EVENT index_body_block_stats_prepend -->
+				{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
+				<!-- EVENT index_body_block_stats_append -->
+			</p>
+		</div>
+	</div>
+</fieldset>
+<!-- ENDIF -->
+<!-- EVENT tabbed_stat_block_tabpanel_append -->

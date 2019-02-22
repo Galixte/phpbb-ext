@@ -1,0 +1,9 @@
+<!-- These cannot go into a CSS file as they are not processed with template vars -->
+
+{% if S_USER_FONT %}
+<style type="text/css">
+*{
+	font-size: {{ S_USER_FONT_SIZE }}%;
+}
+</style>
+{% endif %}
